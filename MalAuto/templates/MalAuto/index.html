@@ -1,0 +1,633 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MalAuto</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'MalAuto/assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'MalAuto/assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'MalAuto/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'MalAuto/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'MalAuto/assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'MalAuto/assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'MalAuto/assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'MalAuto/assets/css/main.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="{% url 'main-page'  %}" class="logo d-flex align-items-center me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>MalAuto<span>.</span></h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <!-- <li><a href="#hero">Home</a></li> -->
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#menu">Услуги</a></li>
+          <li><a href="#testimonials">Отзывы</a></li>
+          <li><a href="#gallery">Галлерея</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <a class="btn-book-a-table" href="#message">Забронируй визит</a>
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center section-bg">
+    <div class="container">
+      <div class="row justify-content-between gy-5">
+        <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+          <h2 data-aos="fade-up">Автомастерская</h2>
+          <p data-aos="fade-up" data-aos-delay="100">Думаете кому доверить ремонт любимого автомобиля? Осуществляет профессиональный кузовной ремонт любой сложности</p>
+          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+            <!-- <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Смотреть видео</span></a> -->
+          </div>
+        </div>
+        <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+          <img src="{% static 'MalAuto/assets/img/hero-img.png' %}" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <p>Узнай больше про нас</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-7 position-relative about-img" style="background-image: url({% static 'MalAuto/assets/img/about.jpg' %}) ;" data-aos="fade-up" data-aos-delay="150">
+            <div class="call-us position-absolute">
+              <h4>Забронируй визит</h4>
+              <p>+375 29 6326466</p>
+            </div>
+          </div>
+          <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic">
+                Kyзoвнoй peмoнт — этo пpoцecc вoccтaнoвлeния ĸyзoвa дo нoминaльнoгo cocтoяния: выpaвнивaниe вмятин и иcĸpивлeний, cвapĸa тpeщин и yдaлeниe pжaвчины.
+                Texнoлoгия peмoнтa ĸyзoвa aвтoмoбиля вĸлючaeт в ceбя ycтpaнeниe вcex дeфeĸтoв: oт ĸoppoзии и мeлĸиx вмятин дo вoccтaнoвлeния гeoмeтpии.
+                B зaвиcимocти oт cлoжнocти и xapaĸтepa paбoт, cyщecтвyют cлeдyющиe виды ĸyзoвнoгo peмoнтa:
+              </p>
+              <ul>
+                <li><i class="bi-chevron-down"></i> Рихтовка.</li>
+                <li><i class="bi-chevron-down"></i> Восстановление геометрии кузова.</li>
+                <li><i class="bi-chevron-down"></i> Капитальный ремонт.</li>
+                <li><i class="bi-chevron-down"></i> Локальный ремонт.</li>
+              </ul>
+              <p>
+                Так как кузов представляет собой не только красивую оболочку автомобиля, но и является средством пассивной защиты, его состояние напрямую влияет на безопасность водителя и пассажиров. 
+                В отличие от исправления мелких дефектов, влияющих исключительно на внешний вид, грамотная рихтовка действительно способна сохранить жизнь.
+              </p>
+
+              <div class="position-relative mt-4">
+                <img src="{% static 'MalAuto/assets/img/about-2.jpg' %}" class="img-fluid" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="why-box">
+              <h3>Почему нужно выбрать MalAuto?</h3>
+              <p>
+                Вы получите подробную консультацию специалиста перед началом ремонта. По Вашему желанию мы можем присылать фотоотчет на каждом этапе выполненных работ.
+              </p>
+            </div>
+          </div><!-- End Why Box -->
+
+          <div class="col-lg-8 d-flex align-items-center">
+            <div class="row gy-4">
+
+              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-clipboard-data"></i>
+                  <h4>Строгая последовательность соблюдения технологий ремонта</h4>
+                  <p>Оценка повреждения, рихтовка, шпатлевка, полготовка к покраске, покраска, полировка</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-star-fill"></i>
+                  <h4>Никаких "подводных камней"</h4>
+                  <p>Каждое незапланированное изменение в ремонте обговаривается с клинтом заранее</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+                  <i class="bi bi-clock"></i>
+                  <h4>Ответственность перед клиентом</h4>
+                  <p>Многолетний опыт работы и большое количество нестандартных видов ремонта научил нас находить индивидуальный подход к каждому клиенту!</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+
+    <!-- ======= Suggest Section ======= -->
+    <section id="menu" class="menu">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <p>Мы предлагаем</p>
+        </div>
+
+        <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+
+          <li class="nav-item">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
+              <h4>Кузовной ремонт</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-breakfast">
+              <h4>Антикоррозийная обработка</h4>
+            </a><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-lunch">
+              <h4>Замена автостёкл</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-dinner">
+              <h4>Автодиагностика</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+        </ul>
+
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+
+          <div class="tab-pane fade active show" id="menu-starters">
+
+            <div class="tab-header text-center">
+              <h3>Кузовной ремонт</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'MalAuto/assets/img/offer/offer-1.1.png' %}" class="glightbox"><img src="{% static 'MalAuto/assets/img/offer/offer-1.1.png' %}" class="menu-img img-fluid" alt="" width="500px" min-height="600px"></a>
+                <h4>Рихтовка</h4>
+                <p class="ingredients">
+                 Рихтовка осуществляется на специальном стапеле с использованием лазерного оборудования
+                </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'MalAuto/assets/img/offer/offer-1.2.png' %}" class="glightbox"><img src="{% static 'MalAuto/assets/img/offer/offer-1.2.png' %}" class="menu-img img-fluid" alt="" width="500px" min-height="600px"></a>
+                <h4>Замена кузовных модулей</h4>
+                <p class="ingredients">
+                 Осуществляем сварочные работы любой сложности будь то замена четверти, криши, ланжеронов или полных машинокомплектов
+                 </p>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'MalAuto/assets/img/offer/offer-1.3.png' %}" class="glightbox"><img src="{% static 'MalAuto/assets/img/offer/offer-1.3.png' %}" class="menu-img img-fluid" alt="" width="500" min-height="600"></a>
+                <h4>Покраска и полировка</h4>
+                <p class="ingredients">
+                  Поготавливаем поверхность к покраске. Полируем кузов  
+                 </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Frame Content -->
+
+          <div class="tab-pane fade" id="menu-breakfast">
+
+            <div class="tab-header text-center">
+              <h3>Антикоррозийная обработка</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'MalAuto/assets/img/offer/offer-2.1.jpg' %}" class="glightbox"><img src="{% static 'MalAuto/assets/img/offer/offer-2.1.jpg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>Обработка кузова автомобиля</h4>
+                <p class="ingredients">
+                  Особенно актуально в наших условиях эксплуатации покрывать кузов автомобиля специальным составом для защиты от повреждений и коррозии.
+                </p>
+              </div><!-- Item -->
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'MalAuto/assets/img/offer/offer-2.2.jpg' %}" class="glightbox"><img src="{% static 'MalAuto/assets/img/offer/offer-2.2.jpg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>Комплекс работ по приостановке ржавчины и нанесения антикорозийного покрытия</h4>
+                <p class="ingredients">
+                  Если автомобиль уже в "годах", то обычной обработки антикоррозийным составом будет недостаточно. Необходимо ликвидировать очаги ржавчины и только тогда наносить защитное покрытие. 
+                </p>
+              </div><!-- Item -->
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'MalAuto/assets/img/offer/offer-2.3.jpg' %}" class="glightbox"><img src="{% static 'MalAuto/assets/img/offer/offer-2.3.jpg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>Предупреждение возникновения коррозии</h4>
+                <p class="ingredients">
+                  Увидели "жучек" или крупный скол на автмобиле - не тяните с ремонтом. Лучше устранить это сразу.
+                </p>
+              </div><!-- Item -->
+
+            </div>
+          </div><!-- End Cor Content -->
+
+          <div class="tab-pane fade" id="menu-lunch">
+
+            <div class="tab-header text-center">
+              <h3>Автостёкла</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'MalAuto/assets/img/offer/offer-3.1.jpg' %}" class="glightbox"><img src="{% static 'MalAuto/assets/img/offer/offer-3.1.jpg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>Замена</h4>
+                <p class="ingredients">
+                  Мы быстро и качественно установим лобовые и задние стекла, а также подъемные стекла дверей, соблюдаются все требования надежности.
+                </p>
+              </div><!-- Menu Item -->
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'MalAuto/assets/img/offer/offer-3.2.jpg' %}" class="glightbox"><img src="{% static 'MalAuto/assets/img/offer/offer-3.2.jpg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>Ремонт</h4>
+                <p class="ingredients">
+                  Фотополимеризация под ультрафиолетом. Удаление излишков материала с последующей полировкой автостекла.
+                </p>
+              </div><!-- Menu Item -->
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'MalAuto/assets/img/offer/offer-3.3.jpeg' %}" class="glightbox"><img src="{% static 'MalAuto/assets/img/offer/offer-3.3.jpeg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>Полировка</h4>
+                <p class="ingredients">
+                  На некоторых машинах после такой процедуры автолюбители в первое время не замечали стекол.
+                </p>
+              </div><!-- Menu Item -->
+            </div>
+          </div><!-- End Change Content -->
+
+
+          <div class="tab-pane fade" id="menu-dinner">
+
+            <div class="tab-header text-center">
+              <h3>Автодиагностика</h3>
+            </div>
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'MalAuto/assets/img/offer/offer-4.1.jpg' %}" class="glightbox"><img src="{% static 'MalAuto/assets/img/offer/offer-4.1.jpg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>Компьютерная диагностика</h4>
+                <p class="ingredients">
+                  Диагностика автомобиля через CAN-шину OBD-2. Подробный отчет о выявленых неисправностях и способах их устранения.
+                </p>
+              </div><!-- Menu Item -->
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'MalAuto/assets/img/offer/offer-4.2.jpeg' %}" class="glightbox"><img src="{% static 'MalAuto/assets/img/offer/offer-4.2.jpeg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>Диагностика осцилографом</h4>
+                <p class="ingredients">
+                  "Ваш автомобиль не читает. Ничего не нашли" - если вы слышали эти слова от сотрудников автосервиса приезжайте к нам, мы постараемся вам помочь. 
+                </p>
+              </div><!-- Menu Item -->
+              <div class="col-lg-4 menu-item">
+                <a href="{% static 'MalAuto/assets/img/offer/offer-4.3.jpeg' %}" class="glightbox"><img src="{% static 'MalAuto/assets/img/offer/offer-4.3.jpeg' %}" class="menu-img img-fluid" alt=""></a>
+                <h4>Диагностика состояния лакокрасочного покрытия автомобиля</h4>
+                <p class="ingredients">
+                  "Не бита, не крашена, один владелец" - привозите автомобиль к нам и мы посмотрим так ли это. По договоренности выезд специалиста. 
+                </p>
+              </div><!-- Menu Item -->
+            </div>
+          </div><!-- End Computer Content -->
+
+      </div>
+    </section><!-- End Suggestion Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <p>Ваше мнение о нас</p>
+        </div>
+
+        <div class="slides-1 swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        Быстро и качественно поменяли пороги. Благодарю!
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>Василий Андрейченко</h3>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="{% static 'MalAuto/assets/img/testimonials/testimonials-1.jpg' %}" class="img-fluid testimonial-img" alt="">
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        Помогли подобрать автомобиль. Очень хороший сервис.
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>Татьяна Преживальская</h3>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="{% static 'MalAuto/assets/img/testimonials/testimonials-2.jpg' %}" class="img-fluid testimonial-img" alt="">
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        Ничего плохого сказать не могу. После аварии сами эвакуировали авто на место ремонта и через месяц машина была как новая!
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>Анастасия Темина</h3>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="{% static 'MalAuto/assets/img/testimonials/testimonials-3.jpg' %}" class="img-fluid testimonial-img" alt="">
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="testimonial-content">
+                      <p>
+                        <i class="bi bi-quote quote-icon-left"></i>
+                        Мне долго не могли найти причину по которой мой автомобтль "не ехал". Я переменял все что только можно. Однажды я решил заехать к специалистам MalAuto особо ни на что не надеясь. Но после 2 часов тестов мне отремонтировали автомобиль и он сновов строю!
+                        <i class="bi bi-quote quote-icon-right"></i>
+                      </p>
+                      <h3>Валерий Буранко</h3>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 text-center">
+                    <img src="{% static 'MalAuto/assets/img/testimonials/testimonials-4.jpg' %}" class="img-fluid testimonial-img" alt="">
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <p>Будни мастерской</span></p>
+        </div>
+
+        <div class="gallery-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{% static 'MalAuto/assets/img/gallery/gallery-1.jpg' %}"><img src="{% static 'MalAuto/assets/img/gallery/gallery-1.jpg' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{% static 'MalAuto/assets/img/gallery/gallery-2.jpg' %}"><img src="{% static 'MalAuto/assets/img/gallery/gallery-2.jpg' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{% static 'MalAuto/assets/img/gallery/gallery-3.jpg' %}"><img src="{% static 'MalAuto/assets/img/gallery/gallery-3.jpg' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{% static 'MalAuto/assets/img/gallery/gallery-4.jpg' %}"><img src="{% static 'MalAuto/assets/img/gallery/gallery-4.jpg' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{% static 'MalAuto/assets/img/gallery/gallery-5.jpg' %}"><img src="{% static 'MalAuto/assets/img/gallery/gallery-5.jpg' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{% static 'MalAuto/assets/img/gallery/gallery-6.jpg' %}"><img src="{% static 'MalAuto/assets/img/gallery/gallery-6.jpg' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{% static 'MalAuto/assets/img/gallery/gallery-7.jpg' %}"><img src="{% static 'MalAuto/assets/img/gallery/gallery-7.jpg' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="{% static 'MalAuto/assets/img/gallery/gallery-8.jpg' %}"><img src="{% static 'MalAuto/assets/img/gallery/gallery-8.jpg' %}" class="img-fluid" alt=""></a></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <p>Нужна помощь? <span>Свяжитесь с нами</span></p>
+        </div>
+
+        <div class="mb-3">
+          <iframe style="border:0; width: 100%; height: 350px;" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Belarus,%20Malorita,%20Gorkogo+(MalAuto)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" frameborder="0" allowfullscreen></iframe>
+        </div><!-- End Google Maps -->
+
+        <div class="row gy-4">
+
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center">
+              <i class="icon bi bi-map flex-shrink-0"></i>
+              <div>
+                <h3>Наш адрес</h3>
+                <p>г. Малорита 225210, Горького 10A</p>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-md-6">
+            <div class="info-item d-flex align-items-center">
+              <i class="icon bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Наша электронная почта</h3>
+                <p>contact@example.com</p>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center">
+              <i class="icon bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Наш телефон</h3>
+                <p>+375 29 6326466</p>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center">
+              <i class="icon bi bi-share flex-shrink-0"></i>
+              <div>
+                <h3>Мы открыты</h3>
+                <div><strong>Пон.-Пят.:</strong> 8.00 - 17.00;
+                  <strong>Суббота, Воскресенье:</strong> Выходной
+                </div>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
+
+      </section><!-- End Contact Section -->
+
+      <section id="message" class="contact">
+        <form class = "php-email-form p-3 p-md-4" enctype="multipart/form-data" method="POST">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-xl-6 form-group">
+              <input type="text" name="name" class="form-control" id="comment_form.name" placeholder="Ваше имя" required>
+            </div>
+            <div class="col-xl-6 form-group">
+              <input type="email" class="form-control" name="email" id="comment_form.name" placeholder="Электронный адрес" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea type="text" class="form-control" name="content" id="comment_form.name" placeholder="Опишите проблему" required></textarea>
+          </div>
+          <div class="my-3">
+            <div class="loading">Загрузка</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Ваш запрос был отправлен. Благодарим за доверие!</div>
+          </div>
+          <div class="text-center"><button type="submit">Послать сообщение</button></div>
+        </form><!--End Contact Form -->
+    </section><!-- End Massage Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div>
+            <h4>Адрес</h4>
+            <p>
+              Малорита <br>
+              ул. Горького 10А<br>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Резервация</h4>
+            <p>
+              <strong>Телефон:</strong> +375 29 6326466<br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Мы работаем</h4>
+            <p>
+              <strong>Пон.-Пят.: 8.00</strong> - 17.00<br>
+              Суббота, Воскресенье: Выходной
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'MalAuto/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'MalAuto/assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'MalAuto/assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'MalAuto/assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'MalAuto/assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'MalAuto/assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
