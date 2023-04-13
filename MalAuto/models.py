@@ -1,7 +1,5 @@
 from django.db import models
-from datetime import datetime
 from django.core.validators import MinLengthValidator
-from phonenumber_field.modelfields import PhoneNumberField
 
 # Create your models here.
 
