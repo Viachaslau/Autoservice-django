@@ -77,12 +77,8 @@ WSGI_APPLICATION = 'Autoservice.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'djangoauto',
-        'PASSWORD': 'django123',
-        'HOST': 'django-autoservice.c2nmhelch7el.eu-north-1.rds.amazonaws.com',
-        'PORT': '5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
